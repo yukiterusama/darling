@@ -1,0 +1,354 @@
+/* 
+Stylesheet 
+Credit: Yukiteru (fb) | andika sujandi (fb)
+
+Kalian bisa copas kok: v
+
+Note: 
+
+backdrop-filter memiliki browser support yang rendah karena masih fitur eksperimantal
+dapat diunakan di browser versi ini atau diatasnya 
+
+> edge   : 17
+> chrome : 76
+> firefox: 70
+> safari : 09
+> opera  : 34
+
+*/
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin             : 0;
+    padding            : 0;
+    user-select        : none;
+    -moz-user-select   : none;
+    -webkit-user-select: none;
+    overflow           : hidden;
+    box-sizing         : border-box;
+    font-family        : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.loading {
+    top : 0;
+    left: 0;
+
+    z-index          : 1000;
+    display          : grid;
+    font-size        : 8rem;
+    width            : 100vw;
+    height           : 100vh;
+    place-items      : center;
+    position         : absolute;
+    background-repeat: no-repeat;
+}
+
+.start {
+    cursor   : pointer;
+    animation: start 4s infinite;
+}
+
+.greetingText {
+    bottom          : 20px;
+    max-width       : 90vw;
+    font-size       : 15px;
+    border-radius   : 10px;
+    text-align      : center;
+    padding         : 5px 10px;
+    position        : absolute;
+    color           : #ffffff;
+    backdrop-filter : blur(5px);
+    background-color: rgba(0, 0, 255, 0.199);
+}
+
+.bg {
+    top              : 0;
+    left             : 0;
+    z-index          : -1;
+    width            : 100vw;
+    height           : 100vh;
+    background-size  : cover;
+    position         : absolute;
+    filter           : blur(2px);
+    background-repeat: no-repeat;
+    background-color : rebeccapurple;
+    background-image : url(../media/background_UwU.jpg);
+    /* Use backgound color if image won't load maybe sometimes ;-;) */
+}
+
+.wrapper {
+    z-index        : 1;
+    display        : flex;
+    width          : 100vw;
+    height         : 100vh;
+    overflow       : hidden;
+    align-items    : center;
+    justify-content: center;
+    position       : relative;
+}
+
+.card {
+
+    display         : flex;
+    padding         : 25px;
+    border-radius   : 15px;
+    width           : 300px;
+    height          : 400px;
+    flex-direction  : column;
+    position        : absolute;
+    backdrop-filter : blur(30px);
+    justify-content : space-between;
+    top             : calc(50% - 200px);
+    left            : calc(50% - 150px);
+    transform       : translateY(10000px);
+    background-color: rgba(255, 255, 255, .45);
+    /* 
+    * calc(50% - 200px);
+    * kalkulasi css sederhana 50% = lebar / tinggi layar / element parent
+    * 200px                       = 50% dari tinggi .card
+    */
+}
+
+.option {
+    width      : 100%;
+    display    : grid;
+    place-items: center;
+}
+
+.text {
+    width   : 100%;
+    position: relative;
+}
+
+.caption {
+    letter-spacing: 1px;
+    width         : 100%;
+    font-size     : 12px;
+    font-weight   : bold;
+    text-align    : center;
+    font-family   : 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.btn {
+    border-radius: 8px;
+    width        : 100%;
+    padding      : 10px;
+    font-size    : 15px;
+    margin-top   : 10px;
+    text-align   : center;
+    cursor       : pointer;
+}
+
+.iya {
+    border-radius: 15px;
+    border       : 3px solid rgba(0, 0, 0, .20);
+}
+
+.tidak {
+    border-radius   : 15px;
+    color           : #fff;
+    background-color: #0b70ff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.times {
+    font-weight: bolder;
+}
+
+.end {
+    top      : 0;
+    left     : 0;
+    padding  : 50px;
+    width    : 100vw;
+    height   : 100vh;
+    position : absolute;
+    transform: translate(-200%);
+}
+
+.happy-end {
+
+    display         : flex;
+    align-items     : center;
+    flex-direction  : column;
+    backdrop-filter : blur(5px);
+    justify-content : space-around;
+    background-color: rgba(255, 91, 228, 0.5);
+}
+
+.bnw {
+    font-size: 20px;
+    filter   : grayscale(1);
+}
+
+.bad-end {
+    padding         : 0 5px;
+    font-size       : 200px;
+    background-color: #fff;
+}
+
+.happy-end>h1 {
+    font-weight: 400;
+    max-width  : 90vw;
+    color      : #ffffff;
+}
+
+.center {
+    display    : grid;
+    place-items: center;
+}
+
+.inTheEnd {
+    top      : 0;
+    left     : 0;
+    font-size: 12px;
+    position : absolute;
+    color    : #000000;
+}
+
+.none {
+    display: none;
+}
+
+.lopelope {
+    width      : auto;
+    height     : auto;
+    overflow   : visible;
+    position   : relative;
+    font-family: sans-serif;
+}
+
+.lopelope span {
+    opacity    : 0;
+    color      : #fff;
+    font-weight: lighter;
+    overflow   : visible;
+    display    : inline-block;
+}
+
+.jam {
+    opacity       : 0;
+    width         : 90vw;
+    font-size     : 70px;
+    display       : flex;
+    flex-direction: column;
+    color         : #ffffff;
+    font-weight   : lighter;
+    position      : relative;
+    font-family   : 'Courier New', Courier, monospace, sans-serif;
+}
+
+.tanggal {
+    font-size  : 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#idsendirian {
+    max-width: 80vw;
+    color    : #ffffff;
+}
+
+.image {
+    opacity  : 0;
+    max-width: 90vw;
+    height   : 100vh;
+    overflow : visible;
+    position : absolute;
+}
+
+.image img {
+    height: 100%;
+    width : auto;
+}
+
+.greeting {
+    min-height : 300px;
+    display    : grid;
+    place-items: end;
+    opacity    : 0;
+}
+
+.love {
+    left             : 0;
+    width            : 50px;
+    height           : 50px;
+    z-index          : 9999;
+    bottom           : -50px;
+    background-size  : cover;
+    position         : absolute;
+    background-repeat: no-repeat;
+    background-image : url(../media/love_PNG85.png);
+}
+
+.preloader {
+    top       : 0;
+    left      : 0;
+    z-index   : 9999;
+    width     : 100vw;
+    height    : 100vh;
+    position  : fixed;
+    color     : #ffffff;
+    background: rgba(0, 0, 0, .5);
+}
+
+.progress {
+    height   : 5px;
+    width    : 90vw;
+    margin   : 10px;
+    transform: skewX(-45deg);
+    border   : 1px solid #ffffff;
+}
+
+.barprog {
+    background: #ffffff;
+    width     : 100%;
+    height    : 100%;
+    max-width : 0%;
+}
+
+@keyframes start {
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@media(max-width: 480px) {
+    .jam {
+        font-size: 40px;
+    }
+
+    .lopelope {
+        font-size: 20px;
+    }
+
+    .greeting {
+        max-width      : 90vw;
+        min-height     : 50vh;
+        display        : flex;
+        justify-content: flex-end;
+        align-items    : flex-end;
+    }
+
+    .conthappy {
+        height: 50vh;
+    }
+
+    .image {
+        display        : flex;
+        width          : 80vw;
+        height         : 100vh;
+        justify-content: flex-end;
+        align-items    : flex-end;
+    }
+
+    .image img {
+        width : 100%;
+        height: auto;
+    }
+}
