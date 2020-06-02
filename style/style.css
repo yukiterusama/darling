@@ -34,9 +34,8 @@ dapat diunakan di browser versi ini atau diatasnya
 }
 
 .loading {
-    top : 0;
-    left: 0;
-
+    top              : 0;
+    left             : 0;
     z-index          : 1000;
     display          : grid;
     font-size        : 8rem;
@@ -306,15 +305,18 @@ dapat diunakan di browser versi ini atau diatasnya
 }
 
 .barprog {
-    background: #ffffff;
-    width     : 100%;
-    max-width : 0%;
-    height    : 100%;
-    animation: anime 2s linear;
+    width           : 100%;
+    height          : 10px;
+    background-color: #ffffff;
+    animation       : anime 4s linear infinite;
 }
 
 @keyframes anime {
-    100%{
+    from{
+        max-width: 0%;
+
+    }
+    to{
         max-width: 100%;
     }
 }
