@@ -143,12 +143,12 @@ dapat diunakan di browser versi ini atau diatasnya
     cursor       : pointer;
 }
 
-.iya {
+.tidak {
     border-radius: 15px;
     border       : 3px solid rgba(0, 0, 0, .20);
 }
 
-.tidak {
+.iya {
     border-radius   : 15px;
     color           : #fff;
     background-color: #0b70ff;
@@ -306,16 +306,16 @@ dapat diunakan di browser versi ini atau diatasnya
 }
 
 .barprog {
-    animation : loading 2s;
     background: #ffffff;
     width     : 100%;
-    height    : 100%;
     max-width : 0%;
+    height    : 100%;
+    animation: anime 2s linear;
 }
 
-@keyframes loading{
-    to{
-        width: 100%;
+@keyframes anime {
+    100%{
+        max-width: 100%;
     }
 }
 

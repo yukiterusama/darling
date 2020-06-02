@@ -828,45 +828,8 @@ mytanggal();
 
 //  preloader copas from somewhere 🙄
 
-;
-(function () {
-    function id(v) {
-        return document.getElementById(v);
-    };
-
-    function loadbar() {
-        var prog = document.querySelector('.barprog'),
-            prel = document.querySelector('.preloader'),
-            img  = document.images,
-            c    = 0,
-            tot  = img.length;
-        if (tot == 0) return doneLoading();
-
-        function imgLoaded() {
-                c                += 1;
-            var perc              = ((100 / tot * c) << 0) + "%";
-                $('.barprog').width(perc);
-            if (c === tot) return doneLoading();
-        }
-
-        function doneLoading() {
-            prel.style.opacity = 0;
-            setTimeout(function () {
-                prel.style.display = "none";
-            }, 1200);
-        }
-        for (var i = 0; i < tot; i++) {
-            var tImg         = new Image();
-                tImg.onload  = imgLoaded;
-                tImg.onerror = imgLoaded;
-                tImg.src     = img[i].src;
-        }
-    }
-    document.addEventListener('DOMContentLoaded', loadbar, false);
-}());
-
-
-
-
+$(window).on("load",function(){
+    $(".preloader").fadeOut("slow");
+});
 
 console.log("Hy User Terimakasih telah mencoba atau melihat project gabut saya kalian boleh saja repost nih halaman cuman tolong jangan remove credit gua lah cuk T-T capek aku buatnya");
