@@ -1,11 +1,26 @@
 _____________________________
-# Version : 1.0.0 First release
+# Simple javascript option game
 _____________________________
 
+<h4>Version : 1.0.0 First release</h4>
+
 # Contributor
-<a href="https://www.facebook.com/profile.php?id=100004542735583">Yukiteru</a>
-<a href="https://github.com/andikasujanadi">Andika Sujandi</a>
+<ol>
+    <li>
+        <a href="https://www.facebook.com/profile.php?id=100004542735583">Yukiteru</a>
+    </li>
+    <li>
+        <a href="https://github.com/andikasujanadi">Andika Sujandi</a>
+    </li>
+</ol>
 
 # Frameworks used
-<a href="https://animejs.com/">Anime.js</a>
-<a href="https://jquery.com/">JQuery</a>
+
+<ol>
+    <li>
+        <a href="https://animejs.com/">Anime.js</a><br>
+    </li>
+    <li>
+        <a href="https://jquery.com/">JQuery</a>
+    </li>
+</ol>
