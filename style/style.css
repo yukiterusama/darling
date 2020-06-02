@@ -306,10 +306,17 @@ dapat diunakan di browser versi ini atau diatasnya
 }
 
 .barprog {
+    animation : loading 2s;
     background: #ffffff;
     width     : 100%;
     height    : 100%;
     max-width : 0%;
+}
+
+@keyframes loading{
+    to{
+        width: 100%;
+    }
 }
 
 @keyframes start {
