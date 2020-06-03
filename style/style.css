@@ -47,8 +47,17 @@ dapat diunakan di browser versi ini atau diatasnya
 }
 
 .start {
-    cursor   : pointer;
-    animation: start 4s infinite;
+    width            : 200px;
+    height           : 200px;
+    background-size  : contain;
+    cursor           : pointer;
+    position         : absolute;
+    background-repeat: no-repeat;
+    top              : calc(50% - 100px);
+    left             : calc(50% - 100px);
+    animation        : start 4s infinite;
+    background-image : url(../media/love_PNG85.png);
+
 }
 
 .greetingText {
@@ -72,7 +81,7 @@ dapat diunakan di browser versi ini atau diatasnya
     height           : 100vh;
     background-size  : cover;
     position         : absolute;
-    filter           : blur(2px);
+    filter           : blur(5px);
     background-repeat: no-repeat;
     background-color : rebeccapurple;
     background-image : url(../media/background_UwU.jpg);
@@ -99,12 +108,11 @@ dapat diunakan di browser versi ini atau diatasnya
     height          : 400px;
     flex-direction  : column;
     position        : absolute;
-    backdrop-filter : blur(30px);
     justify-content : space-between;
     top             : calc(50% - 200px);
     left            : calc(50% - 150px);
     transform       : translateY(10000px);
-    background-color: rgba(255, 255, 255, .45);
+    background-color: rgba(255, 255, 255, .7);
     /* 
     * calc(50% - 200px);
     * kalkulasi css sederhana 50% = lebar / tinggi layar / element parent
@@ -286,14 +294,23 @@ dapat diunakan di browser versi ini atau diatasnya
 }
 
 .preloader {
-    top       : 0;
-    left      : 0;
-    z-index   : 9999;
-    width     : 100vw;
-    height    : 100vh;
-    position  : fixed;
-    color     : #ffffff;
-    background: rgba(0, 0, 0, .5);
+    top            : 0;
+    left           : 0;
+    display        : flex;
+    z-index        : 9999;
+    width          : 100vw;
+    height         : 100vh;
+    position       : fixed;
+    justify-content: center;
+    align-items    : center;
+    flex-direction : column;
+    color          : #ffffff;
+    background     : rgba(0, 0, 0, .7);
+}
+
+.conprelo{
+    width: 100%;
+    height: auto;
 }
 
 .progress {
